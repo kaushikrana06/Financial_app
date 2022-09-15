@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Reminder.RemindActivity">
+
+    <RelativeLayout
+        android:background="#152D35"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar"
+            app:title="Reminders"
+            android:background="#152D35"
+            app:titleTextColor="#D4ECDD"
+            android:elevation="4dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#152D35"
+android:backgroundTint="#152D35"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="20dp"
+            android:padding="10dp" />
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/create_reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/plus_icon" />
+    </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#04293A"
+        android:id="@+id/nav"
+        app:subheaderColor="#4FBDBA"
+        app:itemIconTint="#4FBDBA"
+        app:itemTextColor="#35858B"
+        app:headerLayout="@layout/navigator"
+        app:menu="@menu/drawer"
+        android:layout_gravity="start"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

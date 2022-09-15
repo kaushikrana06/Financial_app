@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:background="#300029"
+    android:layout_marginTop="56dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Credit.CreditCardCalc"
+    tools:showIn="@layout/activity_credit_card_calc">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#171010"
+        android:elevation="10dp"
+        app:cardCornerRadius="10dp">
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Principal:"
+            android:textColor="#93329E"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+
+            android:layout_marginTop="50dp"
+            android:text="Interest Rate:"
+            android:textColor="#93329E"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView15"
+            android:layout_marginLeft="5dp"
+
+            android:layout_marginTop="90dp"
+            android:text="Payment Amount: "
+            android:textColor="#93329E"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#93329E"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="130dp"
+            android:text="Extra Payment: "
+            android:textSize="20dp" />
+
+
+        <EditText
+            android:id="@+id/edtPrincipal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:gravity="right"
+            android:hint="$"
+            android:textColorHint="#0C4271"
+
+            android:inputType="numberDecimal"
+            android:textColor="#FFE3FE" />
+
+        <EditText
+            android:id="@+id/edtInterestRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+        android:textColorHint="#0C4271"
+            android:gravity="right"
+            android:hint="%"
+            android:inputType="numberDecimal"
+            android:textColor="#FFE3FE" />
+
+        <EditText
+            android:id="@+id/edtPaymentAmount"
+            android:layout_width="187dp"
+            android:textColorHint="#0C4271"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="90dp"
+            android:ems="10"
+            android:gravity="right"
+
+            android:hint="$"
+            android:inputType="numberDecimal"
+            android:textColor="#FFE3FE" />
+
+        <EditText
+            android:id="@+id/edtExtraPayment"
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:textColorHint="#0C4271"
+
+            android:layout_marginTop="130dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:gravity="right"
+            android:hint="$"
+
+            android:inputType="numberDecimal"
+            android:textColor="#FFE3FE" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crdd1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/crdd"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#171010"
+        android:elevation="10dp"
+        app:cardCornerRadius="10dp">
+
+        <TextView
+            android:id="@+id/textTimeToPayoff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:text="Credit card paid off in:   "
+            android:textColor="#93329E"
+
+            android:textSize="18dp" />
+
+
+        <TextView
+            android:id="@+id/textTimeToPayoffExtra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#93329E"
+
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="30dp"
+            android:text="With extra payment, paid off in:    "
+            android:textSize="18dp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_below="@+id/crdd1"
+    android:layout_marginTop="40dp"
+    android:layout_height="wrap_content">
+    <Button
+        android:layout_width="wrap_content"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/purple_500"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/button9"
+        android:onClick="creditCalculateLogic"
+         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:layout_marginLeft="5dp"
+
+        android:background="@drawable/round"
+        android:backgroundTint="@color/purple_500"
+        android:id="@+id/button10"
+        android:onClick="creditClearLogic"
+         />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:layout_marginLeft="5dp"
+
+        android:id="@+id/button23"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/purple_500"
+        android:onClick="sendInfo"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:background="@drawable/round"
+        android:layout_marginLeft="5dp"
+
+        android:backgroundTint="@color/purple_500"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/button27"
+        android:onClick="saveInfo"
+     />
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>
+</ScrollView>

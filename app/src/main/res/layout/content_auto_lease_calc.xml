@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#343434"
+    android:fillViewport="true"
+    android:layout_marginTop="56dp">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="30dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Lease.AutoLeaseCalc"
+    tools:showIn="@layout/activity_auto_lease_calc">
+    >
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#253529"
+        android:elevation="10dp"
+        android:padding="20dp"
+        app:cardCornerRadius="10dp">
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:text="MSRP:"
+            android:textColor="#f5692b"
+            android:textSize="22dp" />
+
+        <EditText
+            android:id="@+id/edtMsrp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="150dp"
+            android:ems="10"
+            android:gravity="right"
+            android:hint="$"
+            android:inputType="numberDecimal"
+            android:textColor="#f81111"
+
+            />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+
+            android:text="Interest Rate:"
+
+            android:textColor="#f5692b"
+            android:textSize="22dp" />
+
+        <EditText
+            android:id="@+id/edtInterestRate"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:gravity="right"
+            android:hint="%"
+            android:inputType="numberSigned"
+            android:textColor="#f81111" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="112dp"
+
+            android:text="Term of Lease:"
+            android:textColor="#f5692b"
+            android:textSize="22dp" />
+
+        <EditText
+            android:id="@+id/edtTermOfLease"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="112dp"
+            android:ems="10"
+            android:gravity="right"
+            android:hint="Months"
+            android:inputType="numberDecimal"
+            android:textColor="#f81111" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="164dp"
+
+            android:text="Residual Value:"
+            android:textColor="#f5692b"
+            android:textSize="22dp" />
+
+        <EditText
+            android:id="@+id/edtResidualValue"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="164dp"
+            android:ems="10"
+            android:gravity="right"
+            android:hint="%"
+            android:inputType="numberDecimal"
+            android:textColor="#f81111" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="216dp"
+
+            android:text="Invoice Price:"
+            android:textColor="#f5692b"
+            android:textSize="22dp" />
+
+        <EditText
+            android:id="@+id/edtInvoicePrice"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="216dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:gravity="right"
+            android:hint="$"
+            android:inputType="numberDecimal"
+            android:textColor="#f81111" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crd2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/crd"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#253529"
+        android:padding="20dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="10dp">
+
+        <TextView
+            android:id="@+id/textMonthlyPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:text="Monthly Payment:   $"
+            android:textColor="#f5692b"
+
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/textMonthlyPaymentInCa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:textColor="#f5692b"
+
+            android:text="Monthly Payment in CA:   $"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/textAmtToPrincipal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="#f5692b"
+
+            android:layout_marginTop="112dp"
+            android:text="Amount to Principal:   $"
+            android:textSize="22dp" />
+
+
+        <TextView
+            android:id="@+id/textAmountToInterest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="164dp"
+            android:textColor="#f5692b"
+
+            android:text="Amount to Interest:   $"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/textTotalForLease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+android:layout_marginBottom="10dp"
+            android:textColor="#f5692b"
+
+            android:layout_marginTop="216dp"
+            android:text="Total for Lease:   $"
+            android:textSize="22dp" />
+
+    </androidx.cardview.widget.CardView>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_below="@+id/crd2"
+    android:layout_marginTop="30dp"
+    android:layout_height="50dp">
+
+    <Button
+        android:id="@+id/button11"
+        android:background="@drawable/round"
+        android:layout_width="wrap_content"
+        android:backgroundTint="@color/purple_500"
+        android:layout_height="wrap_content"
+        android:onClick="calculateLogic"
+        android:text="Calculate"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/purple_500"
+
+        android:layout_marginLeft="5dp"
+        android:id="@+id/button12"
+        android:onClick="clearLogic"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:background="@drawable/round"
+        android:id="@+id/button19"
+        android:backgroundTint="@color/purple_500"
+
+        android:onClick="sendInfo"
+        android:layout_marginLeft="5dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/purple_500"
+
+        android:layout_marginLeft="5dp"
+        android:id="@+id/button28"
+        android:onClick="saveInfo"
+        />
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
+</ScrollView>

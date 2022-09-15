@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    
+    tools:showIn="navigation_view">
+<group android:checkableBehavior="single">
+
+    <item android:id="@+id/more"
+        android:icon="@drawable/ic_baseline_business_center_24"
+        android:title="More Tools"
+        />
+    <item android:id="@+id/gst"
+        android:icon="@drawable/ic_baseline_calculate_24"
+        android:title="GST Calculator"/>
+
+
+</group>
+    <item android:title="Communicate">
+
+        <menu>
+            <item android:id="@+id/help"
+                android:icon="@drawable/ic_baseline_help_center_24"
+                android:title="Help"/>
+            <item android:id="@+id/about"
+                android:icon="@drawable/ic_baseline_mark_chat_read_24"
+                android:title="About"/>
+
+        </menu>
+    </item>
+
+</menu>

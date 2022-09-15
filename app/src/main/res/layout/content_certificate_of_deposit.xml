@@ -1,0 +1,239 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:background="#1F1D36"
+    android:layout_marginTop="56dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:backgroundTint="#3F3351"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp"
+            android:padding="5dp"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#E9A6A6"
+                android:layout_marginTop="10dp"
+                android:text="Principal:"
+                android:textSize="20dp" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#E9A6A6"
+                android:layout_marginTop="60dp"
+                android:text="Interest Rate:"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="100dp"
+                android:text="Compound Period:"
+                android:textColor="#E9A6A6"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#E9A6A6"
+                android:layout_marginTop="140dp"
+                android:text="Term:"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/edtPrincipal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColorHint="#864879"
+                android:layout_marginLeft="150dp"
+                android:textColor="#EDEDED"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:gravity="end"
+                android:hint="$"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/edtInterest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="60dp"
+                android:ems="10"
+                android:textColorHint="#864879"
+                android:textColor="#EDEDED"
+
+                android:gravity="end"
+                android:hint="%"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/edtCompound"
+                android:layout_width="174dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="100dp"
+                android:ems="10"
+                android:textColorHint="#864879"
+                android:textColor="#EDEDED"
+
+                android:gravity="end"
+                android:hint="Times per Year"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/edtPaymentAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="140dp"
+                android:ems="10"
+                android:gravity="end"
+                android:textColorHint="#864879"
+                android:textColor="#EDEDED"
+
+                android:hint="Years"
+                android:inputType="numberDecimal" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card"
+            android:backgroundTint="#3F3351"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp"
+            android:padding="5dp"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#E9A6A6"
+                android:layout_marginTop="30dp"
+                android:text="Total After Maturity:"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#E9A6A6"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="30dp"
+                android:text="Interest Earned:"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textTotalAfterMaturity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="30dp"
+                android:text="$"
+                android:textColor="#E9A6A6"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textInterestEarned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="180dp"
+                android:textColor="#E9A6A6"
+                android:layout_marginTop="80dp"
+                android:text="$"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </androidx.cardview.widget.CardView>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginTop="30dp"
+    android:layout_below="@+id/card1">
+
+    <Button
+        android:id="@+id/button"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/purple_500"
+        android:onClick="calculateLogic"
+        android:text="Calculate" />
+
+        <Button
+            android:background="@drawable/round"
+            android:layout_marginLeft="5dp"
+
+            android:backgroundTint="@color/purple_500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:id="@+id/button2"
+            android:onClick="clearLogic"
+            />
+
+        <Button
+            android:background="@drawable/round"
+            android:layout_marginLeft="5dp"
+
+            android:backgroundTint="@color/purple_500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:id="@+id/button22"
+            android:onClick="sendInfo"
+           />
+
+        <Button
+            android:background="@drawable/round"
+            android:layout_marginLeft="5dp"
+
+            android:backgroundTint="@color/purple_500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/button25"
+            android:onClick="saveInfo"
+           />
+</LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

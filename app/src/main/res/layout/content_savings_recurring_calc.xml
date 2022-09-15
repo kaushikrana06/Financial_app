@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:background="#261C2C"
+    android:layout_marginTop="56dp">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Savings.SavingsRecurringCalc"
+    tools:showIn="@layout/activity_savings_recurring_calc">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="10dp"
+    app:cardCornerRadius="10dp"
+    android:paddingTop="20dp"
+    android:backgroundTint="#3E2C41"
+    android:layout_marginTop="20dp"
+    android:id="@+id/cddd">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:textSize="20dp"
+        android:text="Recurring Deposit:"
+        android:textColor="#6E85B2"
+        android:id="@+id/textView30"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:textColor="#6E85B2"
+        android:textColorHint="#5C527F"
+
+        android:id="@+id/edtDepositAmount"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="150dp"
+        android:gravity="right"
+        android:hint="$/Month" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"        android:text="Interest Rate:"
+        android:id="@+id/textView31"
+        android:textColor="#6E85B2"
+
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:textColor="#6E85B2"
+        android:textColorHint="#5C527F"
+
+        android:id="@+id/edtInterestRate"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="150dp"
+        android:gravity="right"
+        android:hint="%" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="#6E85B2"
+        android:text="Compounding Period:"
+        android:id="@+id/textView32"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:textColor="#6E85B2"
+        android:textColorHint="#5C527F"
+
+        android:id="@+id/edtCompoundPeriod"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="150dp"
+        android:gravity="right"
+        android:hint="Times/Year" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="#6E85B2"
+        android:text="Term:"
+        android:id="@+id/textView33"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:textColor="#6E85B2"
+        android:textColorHint="#5C527F"
+
+        android:id="@+id/edtTerm"
+       android:layout_marginTop="160dp"
+        android:layout_marginLeft="150dp"
+        android:gravity="right"
+        android:hint="Years" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"          android:textColor="#6E85B2"
+        android:text="Initial Deposit: "
+        android:id="@+id/textView34"
+        android:layout_below="@+id/textView33"
+       android:layout_marginTop="210dp"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:textColorHint="#5C527F"
+        android:textColor="#6E85B2"
+
+        android:id="@+id/edtInitialDeposit"
+      android:layout_marginTop="210dp"
+        android:layout_marginLeft="150dp"
+        android:gravity="right"
+        android:hint="$"
+        android:layout_marginBottom="30dp"
+        />
+</androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cddd1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cddd"
+        android:backgroundTint="#3E2C41"
+        android:layout_marginTop="30dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="10dp">
+
+        <TextView
+            android:id="@+id/textAccumulatedBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#6E85B2"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="10dp"
+            android:text="Accumulated Balance: $"
+            android:textSize="20dp" />
+    </androidx.cardview.widget.CardView>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_below="@+id/cddd1">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/purple_500"
+        android:id="@+id/button16"
+        android:onClick="calculateLogic"
+         />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/purple_500"
+        android:id="@+id/button17"
+        android:onClick="clearLogic"
+        android:layout_marginLeft="5dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/button20"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/purple_500"
+        android:onClick="sendInfo"
+        android:layout_marginLeft="5dp"/>
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/purple_500"
+        android:id="@+id/button31"
+        android:onClick="saveInfo"
+       android:layout_marginLeft="5dp" />
+</LinearLayout>
+
+</RelativeLayout>
+    </ScrollView>

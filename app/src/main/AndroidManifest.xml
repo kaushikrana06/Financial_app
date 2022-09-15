@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.financeapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SET_ALARM"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/splash"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/splash"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FinanceApp"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".Interest.Compound"
+            android:exported="false" />
+        <activity
+            android:name=".Interest.Simple"
+            android:exported="false" />
+        <activity
+            android:name=".Income.IncomeTax"
+            android:exported="false" />
+        <activity
+            android:name=".EmiCalculator.EmiCal"
+            android:exported="false" />
+        <activity
+            android:name=".Deposit.DepositCalculator"
+            android:exported="false" />
+        <activity
+            android:name=".Loan.AutoLoanCalc"
+            android:exported="false" />
+        <activity
+            android:name=".Lease.AutoLeaseCalc"
+            android:exported="false" />
+        <activity
+            android:name=".Credit.CreditCardCalc"
+            android:exported="false" />
+        <activity
+            android:name=".Mortgage.MortgageCalc"
+            android:exported="false" />
+        <activity
+            android:name=".Retirement.RetirementCalc"
+            android:exported="false" />
+        <activity
+            android:name=".Savings.SavingsRecurringCalc"
+            android:exported="false" />
+        <activity
+            android:name=".MoreTools.More_Tools"
+            android:exported="false" />
+        <activity
+            android:name=".Invoice.BillsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Invoice.SetupPasswordActivity"
+            android:label="@string/setup_password_activity_title"
+            android:exported="false" />
+        <provider
+            android:name="com.example.financeapp.Invoice.data1.GSTBillingContentProvider"
+            android:authorities="com.example.financeapp.Invoice"
+            android:exported="false" />
+        <activity
+            android:name=".Invoice.NewBillActivity"
+            android:theme="@style/AppTheme"
+            android:label="@string/new_bill_activity_title"
+            android:exported="false" />
+        <activity
+            android:name=".Invoice.NewBillCustomerActivity"
+            android:theme="@style/AppTheme"
+            android:label="@string/new_bill_customer_activity_title"
+            android:exported="false" />
+        <activity
+            android:name=".Invoice.DetailActivity"
+            android:theme="@style/AppTheme"
+            android:exported="false" />
+        <activity
+            android:name=".Invoice.SavePDFActivity"
+            android:theme="@style/AppTheme"
+            android:exported="false" />
+        <activity
+            android:name=".News.NewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".News.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Reminder.RemindActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Reminder.ReminderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Reminder.NotificationMessage"
+            android:exported="false" />
+        <activity
+            android:name=".Crypto.CryptoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Crypto.ConvertActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    android:background="#1A1A2E"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".EmiCalculator.EmiCal">
+
+   <androidx.coordinatorlayout.widget.CoordinatorLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar"
+           app:title="EMI Calculator"
+            android:background="#1A1A2E"
+            app:titleTextColor="#1E5F74"
+            android:elevation="4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_principal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/principal"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/round"
+                    android:layout_height="30dp"
+                    android:backgroundTint="#0F3460"
+                    android:textColor="#DBCBBD"
+                    android:textSize="20dp"
+                    android:digits="0123456789."
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/hint_principal"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    tools:ignore="Autofill" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_interest"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/interest"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/round"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#DBCBBD"
+
+                    android:backgroundTint="#0F3460"
+
+                    android:layout_height="30dp"
+                    android:digits="0123456789."
+                    android:hint="@string/hint_interest"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    tools:ignore="Autofill" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/input_layout_tenure"
+                android:layout_marginTop="20dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/years"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/round"
+                    android:layout_height="30dp"
+                    android:digits="0123456789."
+                    android:backgroundTint="#0F3460"
+                    android:textColor="#DBCBBD"
+
+                    android:hint="@string/hint_years"
+                    android:inputType="number"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    tools:ignore="Autofill" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btn_calculate2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/round"
+                android:backgroundTint="@color/purple_500"
+                android:text="Calculate"
+                android:textColor="@android:color/white"
+                tools:ignore="HardcodedText" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/input_layout_emi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp">
+
+                <EditText
+                    android:id="@+id/emi"
+                    android:textColor="#DBCBBD"
+
+                    android:layout_width="match_parent"
+                    android:background="@drawable/round"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#0F3460"
+
+                    android:gravity="center"
+                    android:hint="@string/hint_emi"
+                    android:inputType="number"
+                    android:maxEms="0"
+                    tools:ignore="Autofill" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/input_layout_total_Interest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/interest_total"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/round"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:backgroundTint="#0F3460"
+                    android:textColor="#DBCBBD"
+
+                    android:layout_height="30dp"
+                    android:hint="@string/hint_interest_total"
+                    android:inputType="number"
+                    tools:ignore="Autofill" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+   </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#04293A"
+        android:id="@+id/nav"
+        app:subheaderColor="#4FBDBA"
+        app:itemIconTint="#4FBDBA"
+        app:itemTextColor="#35858B"
+        app:headerLayout="@layout/navigator"
+        app:menu="@menu/drawer"
+        android:layout_gravity="start"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
