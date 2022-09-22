@@ -16,6 +16,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.financeapp.Appinfo;
+import com.example.financeapp.Help;
 import com.example.financeapp.MainActivity;
 import com.example.financeapp.MoreTools.More_Tools;
 import com.example.financeapp.R;
@@ -120,6 +122,14 @@ public class EmiCal extends AppCompatActivity implements NavigationView.OnNaviga
             case R.id.gst:
                 Intent intent1 = new Intent(EmiCal.this, MainActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.about:
+                Intent intent2 = new Intent(EmiCal.this, Appinfo.class);
+                startActivity(intent2);
+                break;
+            case R.id.help:
+                Intent intent4 = new Intent(EmiCal.this, Help.class);
+                startActivity(intent4);
                 break;
 
         }

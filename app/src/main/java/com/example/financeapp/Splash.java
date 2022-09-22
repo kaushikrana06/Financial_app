@@ -12,6 +12,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.example.financeapp.MoreTools.More_Tools;
+
 public class Splash extends AppCompatActivity {
     private static int SCREEN = 5000;
 
@@ -38,7 +40,7 @@ public class Splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Splash.this,MainActivity.class);
+                Intent intent = new Intent(Splash.this, More_Tools.class);
                 startActivity(intent);
                 finish();
             }

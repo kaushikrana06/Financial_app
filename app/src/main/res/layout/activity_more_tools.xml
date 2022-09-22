@@ -4,585 +4,588 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A5C9CA"
     android:id="@+id/drawer_layout"
-
+android:background="@color/white"
     android:fitsSystemWindows="true"
     tools:context=".MoreTools.More_Tools">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         android:orientation="vertical"
-        android:background="#F7ECDE"
         android:weightSum="10">
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/toolbar"
-        android:background="#F7ECDE"
+        android:background="@color/tool"
         app:titleTextColor="@color/black"
-        android:elevation="4dp"/>
+        android:elevation="10dp"/>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#F7ECDE"
-        android:padding="19dp"
-        >
-        <androidx.cardview.widget.CardView
-            android:padding="10dp"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#F9F9F9"
-            app:cardCornerRadius="6dp"
-            app:cardElevation="10dp">
+            android:layout_height="700dp"
+            android:padding="19dp">
 
-            <LinearLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cd"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="#F9F9F9"
-                android:orientation="vertical">
-
+                android:layout_height="700dp"
+                android:backgroundTint="@color/white"
+                android:padding="10dp"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    >
+                    android:layout_height="700dp"
+                    android:layout_weight="5"
+                    android:orientation="vertical">
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1.18"
-                        android:orientation="horizontal">
+                        android:layout_height="655dp"
+                        android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="horizontal"
-                            >
+                            android:layout_weight="1.18"
+                            android:orientation="horizontal">
 
-                            <Button
-                                android:id="@+id/gstcal"
-                                android:layout_width="67dp"
-                                android:layout_height="67dp"
-                                android:layout_marginLeft="30dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginTop="15dp"
-                                android:background="@drawable/gst"
-                                android:padding="6dp"
-                                android:onClick="gstcal"
-                                />
-
-                            <Button
-                                android:id="@+id/mortgage"
-                                android:layout_width="67dp"
-                                android:layout_height="67dp"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginLeft="45dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_marginBottom="8dp"
-                                android:background="@drawable/mortgage"
-                                android:padding="6dp"
-                                android:onClick="mortgageCalc"/>
-
-                            <Button
-                                android:id="@+id/loan"
-                                android:layout_width="67dp"
-                                android:layout_height="67dp"
-                                android:layout_marginLeft="55dp"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginRight="8dp"
-                                android:onClick="autoLoan"
-                                android:background="@drawable/loan"
-                                android:padding="6dp"
-                                 />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="25dp"
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            >
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="GST \n CALCULATOR"
-                                android:textSize="10dp"
-                                android:gravity="center"
-                                android:paddingStart="18dp"
-                                android:textColor="@color/black"
-                                android:layout_gravity="center_horizontal"
-                                android:paddingRight="5dp"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="MORTGAGE"
-                                android:textSize="10dp"
-                                android:textColor="@color/black"
-                                android:paddingStart="55dp"
-                                android:layout_gravity="center_horizontal"
-                                android:paddingRight="5dp"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="LOAN  FETCHER"
-                                android:textSize="10dp"
-                                android:paddingStart="60dp"
-                                android:textColor="@color/black"
-                                android:layout_gravity="center_horizontal"
-                                android:paddingRight="5dp"
-
-                                />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1.18"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal"
-                            >
-                            <Button
-                                android:id="@+id/credit"
-                                android:layout_width="67dp"
-                                android:layout_height="67dp"
-                                android:layout_marginLeft="30dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginTop="15dp"
-                                android:padding="6dp"
-                                android:onClick="creditCard"
-                                android:background="@drawable/credit"/>
-
-                            <Button
-                                android:id="@+id/savings"
-                                android:layout_width="67dp"
-                                android:layout_height="67dp"
-                                android:layout_marginLeft="45dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginTop="15dp"
-                                android:background="@drawable/savings"
-                                android:onClick="savingsRecurring"
-                                android:padding="6dp"
-                                 />
-
-                            <Button
-                                android:id="@+id/lease"
-                                android:layout_width="67dp"
-                                android:layout_height="67dp"
-                                android:layout_marginLeft="55dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginTop="15dp"
-                                android:background="@drawable/emi"
-                                android:onClick="autoLease"
-                                android:padding="6dp"
-                                 />
-
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="25dp"
-                            android:orientation="horizontal"
-                            >
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="CREDIT CARD"
-                                android:textSize="10dp"
-                                android:layout_marginStart="30dp"
-                                android:textColor="@color/black"
-                                android:paddingStart="8dp"
-                                android:layout_gravity="center_horizontal"
-                                android:paddingRight="5dp"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="  SAVINGS \n CALCULATOR"
-                                android:textSize="10dp"
-                                android:gravity="center"
-                                android:textColor="@color/black"
-                                android:layout_marginStart="50dp"
-                                android:layout_gravity="center_horizontal"
-                                />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="  LEASE \n CALCULATOR"
-                                android:textSize="10dp"
-                                android:layout_marginStart="63dp"
-                                android:textColor="@color/black"
-                                android:gravity="center"
-                                android:layout_gravity="center_horizontal"
-                                android:paddingRight="5dp"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1.18"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal"
-                            >
-
-
-                            <Button
-                                android:id="@+id/bsqrt"
-                                android:layout_width="67dp"
-                                android:layout_height="67dp"
-                                android:layout_marginLeft="33dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginTop="15dp"
-                                android:padding="6dp"
-                                android:background="@drawable/retirement"
-                                android:onClick="retirement"
-                                />
-
-                            <Button
-                                android:id="@+id/binv"
-                                android:onClick="income"
-                                android:layout_width="67dp"
-                                android:layout_height="67dp"
-                                android:layout_marginLeft="45dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginTop="15dp"
-                                android:background="@drawable/income"
-                                android:padding="6dp"
-                                 />
-
-                            <Button
-                                android:id="@+id/bdiv"
-                                android:layout_width="67dp"
-                                android:layout_height="67dp"
-                                android:layout_marginLeft="55dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginTop="15dp"
-                                android:background="@drawable/deposit"
-                                android:padding="6dp"
-                                android:onClick="certOfDep"
-                                 />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="25dp"
-                            android:orientation="horizontal"
-
-                            android:textColor="@color/black"
-                            >
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="RETIREMENT \n       PLAN"
-                                android:textSize="10dp"
-                                android:textColor="@color/black"
-                                android:layout_marginStart="30dp"
-                                android:layout_gravity="center_horizontal"
-                                android:paddingRight="5dp"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="INCOME TAX"
-                                android:textSize="10dp"
-                                android:layout_marginStart="55dp"                                android:textColor="@color/black"
-                                android:layout_gravity="center_horizontal"
-                                android:paddingRight="5dp"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="DEPOSIT           CALCULATOR"
-                                android:textSize="10dp"
-                                android:textColor="@color/black"
-                                android:gravity="center"
-                                android:paddingStart="50dp"
-                                android:layout_gravity="center_horizontal"
-                                android:paddingRight="5dp"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1.18"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal"
-                            android:layout_marginLeft="5dp"
-                           >
-
-
-
-                            <Button
-                                android:id="@+id/b8"
-                                android:layout_width="67dp"
-                                android:layout_height="67dp"
-                                android:layout_marginLeft="30dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginTop="15dp"
-                                android:background="@drawable/interest"
-                                android:onClick="interest"
-                                android:padding="6dp"
-                               />
-
-                            <Button
-                                android:id="@+id/b9"
-                                android:layout_width="67dp"
-                                android:layout_height="67dp"
-                                android:layout_marginLeft="45dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginTop="15dp"
-                                android:onClick="emi"
-                                android:background="@drawable/emi"
-                                android:padding="6dp"
-                                />
-
-                            <Button
-                                android:id="@+id/bmul"
-                                android:layout_width="67dp"
-                                android:layout_height="67dp"
-                                android:layout_marginLeft="55dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginTop="15dp"
-                                android:onClick="invoice"
-                                android:background="@drawable/bill"
-                                android:padding="6dp"
-                                />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="25dp"
-                            android:orientation="horizontal"
-                            android:textColor="@color/black"
-                            >
                             <LinearLayout
-                                android:layout_width="110dp"
-                                android:layout_height="25dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:orientation="horizontal">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="INTEREST CALCULATOR"
-                                android:textSize="10dp"
-                                android:gravity="center"
-                                android:paddingStart="25dp"
-                                android:textColor="@color/black"
-                                android:layout_gravity="center_horizontal"
-                                android:paddingRight="5dp"/>
+
+                                <Button
+                                    android:id="@+id/gstcal"
+                                    android:layout_width="67dp"
+                                    android:layout_height="67dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/gst"
+                                    android:onClick="gstcal"
+                                    android:padding="6dp" />
+
+                                <Button
+                                    android:id="@+id/mortgage"
+                                    android:layout_width="67dp"
+                                    android:layout_height="67dp"
+                                    android:layout_marginLeft="45dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/mortgage"
+                                    android:onClick="mortgageCalc"
+                                    android:padding="6dp" />
+
+                                <Button
+                                    android:id="@+id/loan"
+                                    android:layout_width="67dp"
+                                    android:layout_height="67dp"
+                                    android:layout_marginLeft="55dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/loan"
+                                    android:onClick="autoLoan"
+                                    android:padding="6dp" />
+
                             </LinearLayout>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="EMI \nCALCULATOR"
-                                android:textSize="10dp"
-                                android:gravity="center"
-                                android:paddingStart="49dp"
-                                android:layout_gravity="center_horizontal"
-                                android:paddingRight="5dp"
-                                android:textColor="@color/black"
-                                />
+                        </LinearLayout>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="GST-BILLING"
-                                android:textSize="10dp"
-                                android:textColor="@color/black"
-                                android:paddingStart="62dp"
-                                android:layout_gravity="center_horizontal"
-                                android:paddingRight="5dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:paddingStart="18dp"
+                                    android:paddingRight="5dp"
+                                    android:text="GST \n CALCULATOR"
+                                    android:textColor="@color/black"
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:paddingStart="55dp"
+                                    android:paddingRight="5dp"
+                                    android:text="MORTGAGE"
+                                    android:textColor="@color/black"
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:paddingStart="60dp"
+                                    android:paddingRight="5dp"
+                                    android:text="LOAN  FETCHER"
+                                    android:textColor="@color/black"
+                                    android:textSize="10dp"
+
+                                    />
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1.18"
-                        android:orientation="horizontal">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="horizontal"
-                           >
+                            android:layout_weight="1.18"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/credit"
+                                    android:layout_width="67dp"
+                                    android:layout_height="67dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/credit"
+                                    android:onClick="creditCard"
+                                    android:padding="6dp" />
+
+                                <Button
+                                    android:id="@+id/savings"
+                                    android:layout_width="67dp"
+                                    android:layout_height="67dp"
+                                    android:layout_marginLeft="45dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/savings"
+                                    android:onClick="savingsRecurring"
+                                    android:padding="6dp" />
+
+                                <Button
+                                    android:id="@+id/lease"
+                                    android:layout_width="67dp"
+                                    android:layout_height="67dp"
+                                    android:layout_marginLeft="55dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/emi"
+                                    android:onClick="autoLease"
+                                    android:padding="6dp" />
 
 
-                            <Button
-                                android:id="@+id/b5"
-                                android:layout_width="67dp"
-                                android:layout_height="67dp"
-                                android:layout_marginLeft="30dp"
-                                android:layout_marginRight="16dp"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginTop="15dp"
-                                android:background="@drawable/video"
-                                android:onClick="news"
-                                android:padding="6dp"
-                                 />
-
-                            <Button
-                                android:id="@+id/b6"
-                                android:onClick="remind"
-                                android:layout_width="67dp"
-                                android:layout_height="67dp"
-                                android:layout_marginLeft="45dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginTop="15dp"
-                                android:padding="6dp"
-                                android:background="@drawable/reminder"
-                                />
-
-                            <Button
-                                android:id="@+id/bminus"
-                                android:layout_width="67dp"
-                                android:layout_height="67dp"
-                                android:layout_marginLeft="50dp"
-                                android:layout_marginRight="5dp"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginTop="15dp"
-                                android:onClick="crypto"
-                                android:padding="6dp"
-                                android:background="@drawable/crypto"
-                                />
+                            </LinearLayout>
 
                         </LinearLayout>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="28dp"
-                        android:layout_marginBottom="20dp"
-                        android:orientation="horizontal">
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="22dp"
-                            android:orientation="horizontal"
-                            >
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="NEWS UPDATES"
-                                android:textSize="10dp"
-                                android:textColor="@color/black"
+                            android:layout_height="25dp"
+                            android:orientation="horizontal">
 
-                                android:paddingStart="30dp"
-                                android:layout_gravity="center_horizontal"
-                                android:paddingRight="5dp"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="REMINDERS"
-                                android:textSize="10dp"
-                                android:paddingStart="52dp"
-                                android:textColor="@color/black"
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginStart="30dp"
+                                    android:paddingStart="8dp"
+                                    android:paddingRight="5dp"
+                                    android:text="CREDIT CARD"
+                                    android:textColor="@color/black"
+                                    android:textSize="10dp" />
 
-                                android:layout_gravity="center_horizontal"
-                                android:paddingRight="5dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginStart="50dp"
+                                    android:gravity="center"
+                                    android:text="  SAVINGS \n CALCULATOR"
+                                    android:textColor="@color/black"
+                                    android:textSize="10dp" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="CRYPTO \nCONVERTER"
-                                android:textSize="10dp"
-                                android:gravity="center"
-                                android:textColor="@color/black"
-                                android:paddingStart="66dp"
-                                android:layout_gravity="center_horizontal"
-                                android:paddingRight="5dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginStart="63dp"
+                                    android:gravity="center"
+                                    android:paddingRight="5dp"
+                                    android:text="  LEASE \n CALCULATOR"
+                                    android:textColor="@color/black"
+                                    android:textSize="10dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.18"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+
+                                <Button
+                                    android:id="@+id/bsqrt"
+                                    android:layout_width="67dp"
+                                    android:layout_height="67dp"
+                                    android:layout_marginLeft="33dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/retirement"
+                                    android:onClick="retirement"
+                                    android:padding="6dp" />
+
+                                <Button
+                                    android:id="@+id/binv"
+                                    android:layout_width="67dp"
+                                    android:layout_height="67dp"
+                                    android:layout_marginLeft="45dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/income"
+                                    android:onClick="income"
+                                    android:padding="6dp" />
+
+                                <Button
+                                    android:id="@+id/bdiv"
+                                    android:layout_width="67dp"
+                                    android:layout_height="67dp"
+                                    android:layout_marginLeft="55dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/deposit"
+                                    android:onClick="certOfDep"
+                                    android:padding="6dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal"
+
+                                android:textColor="@color/black">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginStart="30dp"
+                                    android:paddingRight="5dp"
+                                    android:text="RETIREMENT \n       PLAN"
+                                    android:textColor="@color/black"
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginStart="55dp"
+                                    android:paddingRight="5dp"
+                                    android:text="INCOME TAX"
+                                    android:textColor="@color/black"
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:paddingStart="50dp"
+                                    android:paddingRight="5dp"
+                                    android:text="DEPOSIT           CALCULATOR"
+                                    android:textColor="@color/black"
+                                    android:textSize="10dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.18"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="horizontal">
+
+
+                                <Button
+                                    android:id="@+id/b8"
+                                    android:layout_width="67dp"
+                                    android:layout_height="67dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/interest"
+                                    android:onClick="interest"
+                                    android:padding="6dp" />
+
+                                <Button
+                                    android:id="@+id/b9"
+                                    android:layout_width="67dp"
+                                    android:layout_height="67dp"
+                                    android:layout_marginLeft="45dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/emi"
+                                    android:onClick="emi"
+                                    android:padding="6dp" />
+
+                                <Button
+                                    android:id="@+id/bmul"
+                                    android:layout_width="67dp"
+                                    android:layout_height="67dp"
+                                    android:layout_marginLeft="55dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/bill"
+                                    android:onClick="invoice"
+                                    android:padding="6dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal"
+                                android:textColor="@color/black">
+
+                                <LinearLayout
+                                    android:layout_width="110dp"
+                                    android:layout_height="25dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:gravity="center"
+                                        android:paddingStart="25dp"
+                                        android:paddingRight="5dp"
+                                        android:text="INTEREST CALCULATOR"
+                                        android:textColor="@color/black"
+                                        android:textSize="10dp" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:paddingStart="49dp"
+                                    android:paddingRight="5dp"
+                                    android:text="EMI \nCALCULATOR"
+                                    android:textColor="@color/black"
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:paddingStart="62dp"
+                                    android:paddingRight="5dp"
+                                    android:text="GST-BILLING"
+                                    android:textColor="@color/black"
+                                    android:textSize="10dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.18"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+
+                                <Button
+                                    android:id="@+id/b5"
+                                    android:layout_width="67dp"
+                                    android:layout_height="67dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="16dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/video"
+                                    android:onClick="news"
+                                    android:padding="6dp" />
+
+                                <Button
+                                    android:id="@+id/b6"
+                                    android:layout_width="67dp"
+                                    android:layout_height="67dp"
+                                    android:layout_marginLeft="45dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/reminder"
+                                    android:onClick="remind"
+                                    android:padding="6dp" />
+
+                                <Button
+                                    android:id="@+id/bminus"
+                                    android:layout_width="67dp"
+                                    android:layout_height="67dp"
+                                    android:layout_marginLeft="50dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/crypto"
+                                    android:onClick="crypto"
+                                    android:padding="6dp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="28dp"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:paddingStart="30dp"
+                                    android:paddingRight="5dp"
+
+                                    android:text="NEWS UPDATES"
+                                    android:textColor="@color/black"
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:paddingStart="52dp"
+                                    android:paddingRight="5dp"
+                                    android:text="REMINDERS"
+
+                                    android:textColor="@color/black"
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginBottom="2dp"
+                                    android:gravity="center"
+                                    android:paddingStart="66dp"
+                                    android:paddingRight="5dp"
+                                    android:text="CRYPTO \nCONVERTER"
+                                    android:textColor="@color/black"
+                                    android:textSize="10dp" />
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
                     </LinearLayout>
-
                 </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-    </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:background="@drawable/round"
+            android:layout_gravity="center"
+            android:id="@+id/bottomnav"
+            android:paddingTop="2dp"
+            android:layout_margin="10dp"
+            android:paddingRight="15dp"
+            app:itemIconSize="20dp"
+            app:itemIconTint="@color/black"
+            app:menu="@menu/bottom_menu"
+            android:layout_height="50dp"
+            android:layout_below="@id/cd" />
+
     </LinearLayout>
+
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="#04293A"
         android:id="@+id/nav"
         app:subheaderColor="#4FBDBA"
         app:itemIconTint="#4FBDBA"
         app:itemTextColor="#35858B"
         app:headerLayout="@layout/navigator"
         app:menu="@menu/drawer"
+        android:background="@color/white"
+
         android:layout_gravity="start"/>
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -4,21 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/drawer_layout"
-    android:background="#1A1A2E"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:fitsSystemWindows="true"
     tools:context=".EmiCalculator.EmiCal">
 
    <androidx.coordinatorlayout.widget.CoordinatorLayout
        android:layout_width="match_parent"
+        android:background="@color/white"
        android:layout_height="match_parent">
        <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:id="@+id/toolbar"
+           android:background="@color/tool"
+           app:titleTextColor="@color/black"
            app:title="EMI Calculator"
-            android:background="#1A1A2E"
-            app:titleTextColor="#1E5F74"
             android:elevation="4dp"/>
 
         <LinearLayout
@@ -26,6 +27,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="?attr/actionBarSize"
             android:orientation="vertical"
+            android:background="@color/white"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="20dp">
@@ -34,6 +36,7 @@
                 android:id="@+id/input_layout_principal"
                 android:layout_width="match_parent"
                 android:layout_marginTop="30dp"
+                android:background="@color/white"
                 android:layout_height="wrap_content">
 
                 <EditText
@@ -41,9 +44,10 @@
                     android:layout_width="match_parent"
                     android:background="@drawable/round"
                     android:layout_height="30dp"
-                    android:backgroundTint="#0F3460"
-                    android:textColor="#DBCBBD"
+                    android:backgroundTint="@color/edit"
+                    android:textColor="@color/black"
                     android:textSize="20dp"
+
                     android:digits="0123456789."
                     android:layout_gravity="center"
                     android:gravity="center"
@@ -57,6 +61,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/input_layout_interest"
                 android:layout_marginTop="20dp"
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -66,9 +71,9 @@
                     android:background="@drawable/round"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:textColor="#DBCBBD"
+                    android:textColor="@color/black"
 
-                    android:backgroundTint="#0F3460"
+                    android:backgroundTint="@color/edit"
 
                     android:layout_height="30dp"
                     android:digits="0123456789."
@@ -83,6 +88,7 @@
 
                 android:id="@+id/input_layout_tenure"
                 android:layout_marginTop="20dp"
+                android:background="@color/white"
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -93,8 +99,8 @@
                     android:background="@drawable/round"
                     android:layout_height="30dp"
                     android:digits="0123456789."
-                    android:backgroundTint="#0F3460"
-                    android:textColor="#DBCBBD"
+                    android:backgroundTint="@color/edit"
+                    android:textColor="@color/black"
 
                     android:hint="@string/hint_years"
                     android:inputType="number"
@@ -112,8 +118,8 @@
                 android:layout_marginTop="40dp"
                 android:background="@drawable/round"
                 android:backgroundTint="@color/purple_500"
+                android:textColor="@color/white"
                 android:text="Calculate"
-                android:textColor="@android:color/white"
                 tools:ignore="HardcodedText" />
 
 
@@ -121,18 +127,18 @@
 
                 android:id="@+id/input_layout_emi"
                 android:layout_width="match_parent"
+                android:background="@color/white"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp">
 
                 <EditText
                     android:id="@+id/emi"
-                    android:textColor="#DBCBBD"
-
+                    android:textColor="@color/black"
                     android:layout_width="match_parent"
                     android:background="@drawable/round"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:backgroundTint="#0F3460"
+                    android:backgroundTint="@color/edit"
 
                     android:gravity="center"
                     android:hint="@string/hint_emi"
@@ -146,6 +152,7 @@
 
                 android:id="@+id/input_layout_total_Interest"
                 android:layout_width="match_parent"
+                android:background="@color/white"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp">
 
@@ -155,8 +162,8 @@
                     android:background="@drawable/round"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:backgroundTint="#0F3460"
-                    android:textColor="#DBCBBD"
+                    android:backgroundTint="@color/edit"
+                    android:textColor="@color/black"
 
                     android:layout_height="30dp"
                     android:hint="@string/hint_interest_total"
@@ -172,11 +179,12 @@
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="#04293A"
         android:id="@+id/nav"
         app:subheaderColor="#4FBDBA"
         app:itemIconTint="#4FBDBA"
         app:itemTextColor="#35858B"
+        android:background="@color/white"
+
         app:headerLayout="@layout/navigator"
         app:menu="@menu/drawer"
         android:layout_gravity="start"/>

@@ -3,8 +3,8 @@
     android:id="@+id/ScrollView01"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/white"
     android:fillViewport="true"
-    android:background="#000000"
     android:layout_marginTop="56dp">
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -23,10 +23,11 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/caard"
             android:layout_width="match_parent"
+            android:backgroundTint="@color/white"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:backgroundTint="#150050"
             android:elevation="10dp"
+            android:layout_marginBottom="10dp"
             android:padding="10dp"
             app:cardCornerRadius="10dp">
 
@@ -38,24 +39,32 @@
                 android:layout_marginTop="10dp"
                 android:paddingTop="10dp"
                 android:text="House Price:"
-                android:textColor="#916BBF"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
+            <TextView
+                android:layout_width="41dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="340dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:text="₹"
+                android:textSize="18dp" />
 
             <EditText
+                android:textColor="@color/black"
                 android:id="@+id/edtHousePrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
                 android:layout_marginTop="10dp"
                 android:ems="10"
-                android:gravity="right"
-                android:hint="$"
+                android:gravity="center"
                 android:inputType="numberDecimal"
                 android:paddingTop="10dp"
-                android:textColor="#916BBF"
-                android:textColorHint="#610094" />
+              />
 
             <TextView
+
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -63,8 +72,16 @@
                 android:layout_marginTop="60dp"
                 android:text="Down Payment:"
 
-                android:textColor="#916BBF"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="41dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="340dp"
+                android:layout_marginTop="65dp"
+                android:text="₹"
+                android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -74,36 +91,41 @@
                 android:layout_marginTop="100dp"
                 android:text="Interest Rate: "
 
-                android:textColor="#916BBF"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
+            <TextView
+                android:layout_width="41dp"
+                android:textColor="@color/black"
+                android:layout_height="36dp"
+                android:layout_marginLeft="340dp"
+                android:layout_marginTop="105dp"
+                android:text="%"
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/edtDownPayment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:layout_marginLeft="150dp"
                 android:layout_marginTop="60dp"
                 android:ems="10"
 
-                android:gravity="right"
-                android:hint="$"
+                android:gravity="center"
                 android:inputType="numberDecimal"
-                android:textColor="#916BBF"
-                android:textColorHint="#610094" />
+               />
 
             <EditText
                 android:id="@+id/edtInterestRate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
+                android:textColor="@color/black"
                 android:layout_marginTop="100dp"
                 android:ems="10"
-                android:gravity="right"
-                android:hint="%"
-
+                android:gravity="center"
                 android:inputType="numberDecimal"
-                android:textColor="#916BBF"
-                android:textColorHint="#610094" />
+               />
 
             <TextView
                 android:id="@+id/textView5"
@@ -113,35 +135,60 @@
                 android:layout_marginTop="140dp"
 
                 android:text="Term (Years):"
-                android:textColor="#916BBF"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/edtPaymentAmount"
                 android:layout_width="wrap_content"
+                android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
                 android:layout_marginTop="140dp"
                 android:layout_marginBottom="20dp"
 
                 android:ems="10"
-                android:gravity="right"
-                android:hint="years"
-                android:inputType="numberDecimal"
-                android:textColor="#916BBF"
-                android:textColorHint="#610094" />
+                android:gravity="center"
 
+                android:inputType="numberDecimal"
+              />
+            <TextView
+                android:layout_width="41dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="330dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="150dp"
+                android:text="Years"
+                android:textSize="15dp" />
 
         </androidx.cardview.widget.CardView>
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+            android:backgroundTint="@color/white"
+        android:text="Select Currency"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/ttt"
+        android:layout_below="@id/caard"/>
 
+        <Spinner
+            android:id="@+id/spinn"
+            android:backgroundTint="@color/black"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ttt" />
 
         <androidx.cardview.widget.CardView
+            android:backgroundTint="@color/white"
             android:id="@+id/caard1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/caard"
-            android:layout_marginTop="40dp"
-            android:backgroundTint="#150050"
+            android:layout_below="@+id/spinn"
+            android:layout_marginTop="35dp"
+
             android:elevation="10dp"
             android:padding="10dp"
             app:cardCornerRadius="10dp">
@@ -154,7 +201,7 @@
                 android:layout_marginTop="20dp"
                 android:text="Monthly Payment:"
 
-                android:textColor="#916BBF"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
 
             <TextView
@@ -165,7 +212,7 @@
                 android:layout_marginTop="20dp"
 
                 android:layout_marginRight="10dp"
-                android:textColor="#916BBF"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
 
             <TextView
@@ -176,7 +223,7 @@
                 android:layout_marginTop="60dp"
 
                 android:text="Bi-Monthly Payment:"
-                android:textColor="#916BBF"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
 
             <TextView
@@ -187,7 +234,7 @@
                 android:layout_gravity="right"
                 android:layout_marginTop="60dp"
                 android:layout_marginRight="10dp"
-                android:textColor="#916BBF"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
 
             <TextView
@@ -198,7 +245,7 @@
                 android:layout_marginTop="100dp"
 
                 android:text="Amount To Interest:"
-                android:textColor="#916BBF"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
 
             <TextView
@@ -209,7 +256,7 @@
                 android:layout_marginTop="100dp"
                 android:layout_marginRight="10dp"
 
-                android:textColor="#916BBF"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
 
             <TextView
@@ -220,7 +267,7 @@
                 android:layout_marginTop="140dp"
                 android:text="Amount To Principal:"
 
-                android:textColor="#916BBF"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
 
             <TextView
@@ -232,7 +279,7 @@
                 android:layout_marginRight="10dp"
 
                 android:layout_marginBottom="20dp"
-                android:textColor="#916BBF"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
 
 
@@ -241,9 +288,10 @@
 
            <LinearLayout
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="150dp"
                android:gravity="center"
                android:layout_marginTop="50dp"
+               android:background="@color/white"
                android:layout_below="@id/caard1">
 
                <Button
@@ -251,8 +299,9 @@
                    android:layout_height="wrap_content"
                    android:text="Calculate"
                    android:background="@drawable/round"
-                   android:backgroundTint="@color/purple_500"
                    android:id="@+id/btnCalculate"
+                   android:backgroundTint="@color/purple_500"
+                   android:textColor="@color/white"
                    android:layout_gravity="right"
                    android:onClick="calculateLogic"/>
 
@@ -261,19 +310,21 @@
                    android:layout_height="wrap_content"
                    android:text="Clear"
                    android:background="@drawable/round"
-                   android:backgroundTint="@color/purple_500"
                    android:id="@+id/btnClear"
+                   android:backgroundTint="@color/purple_500"
+                   android:textColor="@color/white"
                    android:layout_marginLeft="5dp"
 
                    android:layout_gravity="right"
                    android:onClick="clearLogic"/>
 
                <Button
+                   android:backgroundTint="@color/purple_500"
+                   android:textColor="@color/white"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="Save"
                    android:background="@drawable/round"
-                   android:backgroundTint="@color/purple_500"
                    android:id="@+id/button30"
                    android:layout_gravity="right"
                    android:layout_marginLeft="5dp"
@@ -281,11 +332,12 @@
                    android:onClick="saveInfo"/>
 
                <Button
+                   android:backgroundTint="@color/purple_500"
+                   android:textColor="@color/white"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="Send"
                    android:background="@drawable/round"
-                   android:backgroundTint="@color/purple_500"
                    android:id="@+id/button18"
                    android:layout_marginLeft="5dp"
                    android:layout_gravity="right"

@@ -6,11 +6,11 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+    <uses-permission
+        android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
         tools:ignore="ProtectedPermissions" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.SET_ALARM"/>
-
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
 
     <application
         android:allowBackup="true"
@@ -22,7 +22,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinanceApp"
         tools:targetApi="31">
-
+        <activity
+            android:name=".Help"
+            android:exported="false" />
+        <activity
+            android:name=".Appinfo"
+            android:exported="false" />
         <activity
             android:name=".Interest.Compound"
             android:exported="false" />
@@ -64,30 +69,32 @@
             android:exported="false" />
         <activity
             android:name=".Invoice.SetupPasswordActivity"
-            android:label="@string/setup_password_activity_title"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/setup_password_activity_title" />
+
         <provider
-            android:name="com.example.financeapp.Invoice.data1.GSTBillingContentProvider"
+            android:name=".Invoice.data1.GSTBillingContentProvider"
             android:authorities="com.example.financeapp.Invoice"
             android:exported="false" />
+
         <activity
             android:name=".Invoice.NewBillActivity"
-            android:theme="@style/AppTheme"
+            android:exported="false"
             android:label="@string/new_bill_activity_title"
-            android:exported="false" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Invoice.NewBillCustomerActivity"
-            android:theme="@style/AppTheme"
+            android:exported="false"
             android:label="@string/new_bill_customer_activity_title"
-            android:exported="false" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Invoice.DetailActivity"
-            android:theme="@style/AppTheme"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Invoice.SavePDFActivity"
-            android:theme="@style/AppTheme"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".News.NewsActivity"
             android:exported="false" />

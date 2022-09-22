@@ -20,6 +20,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.financeapp.Appinfo;
+import com.example.financeapp.Help;
 import com.example.financeapp.MainActivity;
 import com.example.financeapp.MoreTools.More_Tools;
 import com.example.financeapp.R;
@@ -70,6 +72,14 @@ public class DepositCalculator extends AppCompatActivity implements NavigationVi
             case R.id.gst:
                 Intent intent1 = new Intent(DepositCalculator.this, MainActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.about:
+                Intent intent2 = new Intent(DepositCalculator.this, Appinfo.class);
+                startActivity(intent2);
+                break;
+            case R.id.help:
+                Intent intent4 = new Intent(DepositCalculator.this, Help.class);
+                startActivity(intent4);
                 break;
 
         }

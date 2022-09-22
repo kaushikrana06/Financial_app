@@ -7,16 +7,20 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 
+import com.example.financeapp.Appinfo;
 import com.example.financeapp.Credit.CreditCardCalc;
 import com.example.financeapp.Crypto.CryptoActivity;
 import com.example.financeapp.Deposit.DepositCalculator;
 import com.example.financeapp.EmiCalculator.EmiCal;
+import com.example.financeapp.Help;
 import com.example.financeapp.Income.IncomeTax;
 import com.example.financeapp.Interest.Simple;
 import com.example.financeapp.Invoice.BillsActivity;
@@ -29,17 +33,18 @@ import com.example.financeapp.R;
 import com.example.financeapp.Reminder.RemindActivity;
 import com.example.financeapp.Retirement.RetirementCalc;
 import com.example.financeapp.Savings.SavingsRecurringCalc;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
-public class More_Tools extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
+public class More_Tools extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
  DrawerLayout drawerLayout;
+ BottomNavigationView navigationView1;
  @Override
-    protected void onCreate(Bundle savedInstanceState){
+ protected void onCreate(Bundle savedInstanceState){
      super.onCreate(savedInstanceState);
   this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
   setContentView(R.layout.activity_more_tools);
-
   Toolbar toolbar = findViewById(R.id.toolbar);
   setSupportActionBar(toolbar);
   drawerLayout=findViewById(R.id.drawer_layout);
@@ -50,6 +55,41 @@ public class More_Tools extends AppCompatActivity implements NavigationView.OnNa
   toggle.syncState();
   if(savedInstanceState == null)
    navigationView.setCheckedItem(R.id.more);
+
+
+
+  BottomNavigationView.OnNavigationItemSelectedListener monNavigationItemSelectedListener=new BottomNavigationView.OnNavigationItemSelectedListener() {
+   @Override
+   public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    switch (item.getItemId()){
+     case R.id.gst1:
+
+      Intent intent = new Intent(More_Tools.this, MainActivity.class);
+      startActivity(intent);
+      break;
+     case R.id.home:
+      recreate();
+      break;
+     case R.id.sici:
+      Intent intent1 = new Intent(More_Tools.this, Simple.class);
+      startActivity(intent1);
+      break;
+     case R.id.bills:
+      Intent intent2 = new Intent(More_Tools.this, BillsActivity.class);
+      startActivity(intent2);
+      break;
+     case R.id.news:
+      Intent intent3 = new Intent(More_Tools.this, NewsActivity.class);
+      startActivity(intent3);
+      break;
+    }
+    return  true;
+   }
+  };
+  navigationView1=findViewById(R.id.bottomnav);
+  navigationView1.setOnNavigationItemSelectedListener(monNavigationItemSelectedListener);
+  navigationView1.getMenu().findItem(R.id.home).setChecked(true);
+
 
  }
  @Override
@@ -64,6 +104,14 @@ public class More_Tools extends AppCompatActivity implements NavigationView.OnNa
    case R.id.gst:
     Intent intent = new Intent(More_Tools.this, MainActivity.class);
     startActivity(intent);
+    break;
+   case R.id.about:
+    Intent intent2 = new Intent(More_Tools.this, Appinfo.class);
+    startActivity(intent2);
+    break;
+   case R.id.help:
+    Intent intent4 = new Intent(More_Tools.this, Help.class);
+    startActivity(intent4);
     break;
 
   }
@@ -147,18 +195,46 @@ public class More_Tools extends AppCompatActivity implements NavigationView.OnNa
   Intent intent = new Intent(More_Tools.this, CryptoActivity.class);
   startActivity(intent);
  }
- @Override
- public void onBackPressed() {
-  if(drawerLayout.isDrawerOpen(GravityCompat.START))
-   drawerLayout.closeDrawer(GravityCompat.START);
-        else
-        {
-
-         Intent in=new Intent(More_Tools.this,MainActivity.class);
-         startActivity(in);
-            super.onBackPressed();
-        }
- }
+// @Override
+// public void onBackPressed() {
+//  if(drawerLayout.isDrawerOpen(GravityCompat.START))
+//   drawerLayout.closeDrawer(GravityCompat.START);
+//        else
+//        {
+//
+//         Intent in=new Intent(More_Tools.this,MainActivity.class);
+//         startActivity(in);
+//            super.onBackPressed();
+//        }
+// }
+@Override
+public void onBackPressed() {
+ navigationView1.getMenu().findItem(R.id.home).setChecked(true);
+ if(drawerLayout.isDrawerOpen(GravityCompat.START))
+  drawerLayout.closeDrawer(GravityCompat.START);
+//        else
+//        {
+//            super.onBackPressed();
+//        }
+ AlertDialog.Builder mBuilder = new AlertDialog.Builder(this);
+ mBuilder.setMessage("Are you sure you want to Exit ?")
+         .setCancelable(true)
+         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+          public void onClick(DialogInterface dialog, int id) {
+           Intent a = new Intent(Intent.ACTION_MAIN);
+           a.addCategory(Intent.CATEGORY_HOME);
+           a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+           startActivity(a);
+          }
+         })
+         .setNegativeButton("No", new DialogInterface.OnClickListener() {
+          public void onClick(DialogInterface dialog, int id) {
+           dialog.cancel();
+          }
+         });
+ AlertDialog mAlertDialog = mBuilder.create();
+ mAlertDialog.show();
+}
 
 
 }

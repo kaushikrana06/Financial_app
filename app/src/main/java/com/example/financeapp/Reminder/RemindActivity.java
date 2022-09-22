@@ -7,6 +7,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 
+import com.example.financeapp.Appinfo;
+import com.example.financeapp.Help;
 import com.example.financeapp.MainActivity;
 import com.example.financeapp.MoreTools.More_Tools;
 import com.example.financeapp.Mortgage.MortgageCalc;
@@ -38,7 +40,7 @@ public class RemindActivity extends AppCompatActivity implements NavigationView.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_remind);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+       this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -81,6 +83,14 @@ public class RemindActivity extends AppCompatActivity implements NavigationView.
             case R.id.gst:
                 Intent intent1 = new Intent(RemindActivity.this, MainActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.about:
+                Intent intent2 = new Intent(RemindActivity.this, Appinfo.class);
+                startActivity(intent2);
+                break;
+            case R.id.help:
+                Intent intent4 = new Intent(RemindActivity.this, Help.class);
+                startActivity(intent4);
                 break;
 
         }

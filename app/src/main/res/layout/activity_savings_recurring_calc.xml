@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/drawer_layout"
+    android:background="@color/white"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".Savings.SavingsRecurringCalc">
@@ -12,6 +13,7 @@
     android:layout_height="match_parent">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
+        android:background="@color/white"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
@@ -20,9 +22,11 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:id="@+id/toolbar"
-            android:background="#261C2C"
+            android:background="@color/tool"
+            app:titleTextColor="@color/black"
+
             app:title="Savings Calculator"
-            app:titleTextColor="#5C527F"
+
             android:elevation="4dp"/>
     </com.google.android.material.appbar.AppBarLayout>
     <include layout="@layout/content_savings_recurring_calc" />
@@ -32,10 +36,11 @@
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="#04293A"
         android:id="@+id/nav"
         app:subheaderColor="#4FBDBA"
         app:itemIconTint="#4FBDBA"
+        android:background="@color/white"
+
         app:itemTextColor="#35858B"
         app:headerLayout="@layout/navigator"
         app:menu="@menu/drawer"

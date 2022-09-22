@@ -21,6 +21,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.financeapp.Appinfo;
+import com.example.financeapp.Help;
 import com.example.financeapp.MainActivity;
 import com.example.financeapp.MoreTools.More_Tools;
 import com.example.financeapp.R;
@@ -73,6 +75,14 @@ public class SavingsRecurringCalc extends AppCompatActivity implements Navigatio
             case R.id.gst:
                 Intent intent1 = new Intent(SavingsRecurringCalc.this, MainActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.about:
+                Intent intent2 = new Intent(SavingsRecurringCalc.this, Appinfo.class);
+                startActivity(intent2);
+                break;
+            case R.id.help:
+                Intent intent4 = new Intent(SavingsRecurringCalc.this, Help.class);
+                startActivity(intent4);
                 break;
 
         }

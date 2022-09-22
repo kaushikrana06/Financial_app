@@ -5,13 +5,16 @@
     android:layout_width="match_parent"
     android:id="@+id/drawer_layout"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:fitsSystemWindows="true"
     tools:context=".Loan.AutoLoanCalc">
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
+        android:background="@color/tool"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
@@ -19,9 +22,9 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:id="@+id/toolbar"
-            android:background="#343434"
+            android:background="@color/tool"
+            app:titleTextColor="@color/black"
             app:title="Loan Fetcher"
-            app:titleTextColor="#B3A0A0"
             android:elevation="4dp"/>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -32,11 +35,12 @@
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="#04293A"
         android:id="@+id/nav"
         app:subheaderColor="#4FBDBA"
         app:itemIconTint="#4FBDBA"
         app:itemTextColor="#35858B"
+        android:background="@color/white"
+
         app:headerLayout="@layout/navigator"
         app:menu="@menu/drawer"
         android:layout_gravity="start"/>

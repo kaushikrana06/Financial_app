@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
     tools:context=".Credit.CreditCardCalc">
@@ -13,14 +14,15 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/tool"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:id="@+id/toolbar"
-            android:background="#300029"
-            app:titleTextColor="#BB8760"
+            android:background="@color/tool"
+            app:titleTextColor="@color/black"
             app:title="Credit Card Manager"
             android:elevation="4dp"/>
     </com.google.android.material.appbar.AppBarLayout>
@@ -32,12 +34,13 @@
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="#04293A"
         android:id="@+id/nav"
         app:subheaderColor="#4FBDBA"
         app:itemIconTint="#4FBDBA"
         app:itemTextColor="#35858B"
         app:headerLayout="@layout/navigator"
+        android:background="@color/white"
+
         app:menu="@menu/drawer"
         android:layout_gravity="start"/>
 

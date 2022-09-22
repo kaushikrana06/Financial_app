@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:id="@+id/drawer_layout"
 
     android:fitsSystemWindows="true"
@@ -20,13 +21,13 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
+            android:background="@color/tool"
+            app:titleTextColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#343434"
             app:title="Lease Calculator"
             android:elevation="4dp"
-            app:subtitleTextColor="#B3A0A0"
-            app:titleTextColor="#B3A0A0" />
+            />
 
     </com.google.android.material.appbar.AppBarLayout>
     <include layout="@layout/content_auto_lease_calc" />
@@ -36,12 +37,13 @@
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="#04293A"
         android:id="@+id/nav"
         app:subheaderColor="#4FBDBA"
         app:itemIconTint="#4FBDBA"
         app:itemTextColor="#35858B"
         app:headerLayout="@layout/navigator"
         app:menu="@menu/drawer"
+        android:background="@color/white"
+
         android:layout_gravity="start"/>
 </androidx.drawerlayout.widget.DrawerLayout>

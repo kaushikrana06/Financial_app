@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="176dp"
-    android:background="#072227"
     android:gravity="bottom"
+    android:background="@color/tool"
     android:orientation="vertical"
     android:padding="15dp"
     android:theme="@android:style/ThemeOverlay.Material.Dark">
@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Finance Menu"
-        android:textColor="#4FBDBA"
+        android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="italic" />
 

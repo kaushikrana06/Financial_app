@@ -20,10 +20,10 @@
         <menu>
             <item android:id="@+id/help"
                 android:icon="@drawable/ic_baseline_help_center_24"
-                android:title="Help"/>
+                android:title="Contact Us"/>
             <item android:id="@+id/about"
-                android:icon="@drawable/ic_baseline_mark_chat_read_24"
-                android:title="About"/>
+                android:icon="@drawable/ic_baseline_info_24"
+                android:title="App info"/>
 
         </menu>
     </item>

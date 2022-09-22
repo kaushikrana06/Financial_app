@@ -28,11 +28,16 @@ import androidx.loader.content.Loader;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.financeapp.Appinfo;
+import com.example.financeapp.Help;
+import com.example.financeapp.Interest.Simple;
 import com.example.financeapp.Invoice.data1.GSTBillingContract;
 import com.example.financeapp.MainActivity;
 import com.example.financeapp.MoreTools.More_Tools;
 import com.example.financeapp.Mortgage.MortgageCalc;
+import com.example.financeapp.News.NewsActivity;
 import com.example.financeapp.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
@@ -42,6 +47,7 @@ public class BillsActivity extends AppCompatActivity implements LoaderManager.Lo
     private RecyclerView unpaidRecyclerView;
     private com.example.financeapp.Invoice.BillAdapter adapter;
     private String billListStatus;
+    BottomNavigationView navigationView1;
     private int billDividerColor;
     private String billSortOrder;
 
@@ -61,6 +67,39 @@ public class BillsActivity extends AppCompatActivity implements LoaderManager.Lo
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.open,R.string.close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+        BottomNavigationView.OnNavigationItemSelectedListener monNavigationItemSelectedListener=new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.gst1:
+                        Intent intent2 = new Intent(BillsActivity.this, MainActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case R.id.home:
+                        Intent intent = new Intent(BillsActivity.this, More_Tools.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.sici:
+                        Intent intent1 = new Intent(BillsActivity.this, Simple.class);
+                        startActivity(intent1);
+                        break;
+                    case R.id.bills:
+                        recreate();
+                        break;
+                    case R.id.news:
+                        Intent intent3 = new Intent(BillsActivity.this, NewsActivity.class);
+                        startActivity(intent3);
+                        break;
+                }
+                return  true;
+            }
+        };
+        navigationView1=findViewById(R.id.bottomnav);
+        navigationView1.setOnNavigationItemSelectedListener(monNavigationItemSelectedListener);
+        navigationView1.getMenu().findItem(R.id.bills).setChecked(true);
+
+
+
 
         if(savedInstanceState != null){
             billListStatus = savedInstanceState.getString(GSTBillingContract.GSTBillingEntry.PRIMARY_COLUMN_STATUS);
@@ -227,6 +266,14 @@ public class BillsActivity extends AppCompatActivity implements LoaderManager.Lo
                 Intent intent1 = new Intent(BillsActivity.this, MainActivity.class);
                 startActivity(intent1);
                 break;
+            case R.id.about:
+                Intent intent2 = new Intent(BillsActivity.this, Appinfo.class);
+                startActivity(intent2);
+                break;
+            case R.id.help:
+                Intent intent4 = new Intent(BillsActivity.this, Help.class);
+                startActivity(intent4);
+                break;
 
         }
         drawer.closeDrawer(GravityCompat.START);
@@ -234,10 +281,15 @@ public class BillsActivity extends AppCompatActivity implements LoaderManager.Lo
     }
     @Override
     public void onBackPressed() {
+        navigationView1.getMenu().findItem(R.id.bills).setChecked(true);
+
         if(drawer.isDrawerOpen(GravityCompat.START))
             drawer.closeDrawer(GravityCompat.START);
         else
         {
+            Intent intent = new Intent(BillsActivity.this, More_Tools.class);
+            startActivity(intent);
+            finish();
             finish();
 
             super.onBackPressed();

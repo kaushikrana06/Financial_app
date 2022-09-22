@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#152D35"
     tools:context=".Reminder.NotificationMessage">
 
 
@@ -15,7 +14,7 @@
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="Hello"
-        android:textColor="#D4ECDD"
+        android:textColor="@color/black"
         android:textSize="22dp"
         android:textStyle="bold" />
 </LinearLayout>

@@ -18,9 +18,14 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.financeapp.Appinfo;
+import com.example.financeapp.Help;
+import com.example.financeapp.Invoice.BillsActivity;
 import com.example.financeapp.MainActivity;
 import com.example.financeapp.MoreTools.More_Tools;
+import com.example.financeapp.News.NewsActivity;
 import com.example.financeapp.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 public class Compound extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,7 +34,9 @@ public class Compound extends AppCompatActivity implements NavigationView.OnNavi
     EditText editamount,rate;
     double time=6,amount=1000,annualrate=8;
     SeekBar seekbar;
-    TextView interest;
+    TextView interest,tenure;
+    BottomNavigationView navigationView1;
+
     double compoundinterest;
     double n=12;
     @Override
@@ -40,12 +47,47 @@ public class Compound extends AppCompatActivity implements NavigationView.OnNavi
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        tenure=findViewById(R.id.textView9);
         drawerLayout=findViewById(R.id.drawer_layout);
         NavigationView navigationView=findViewById(R.id.nav);
         navigationView.setNavigationItemSelectedListener( this);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+        BottomNavigationView.OnNavigationItemSelectedListener monNavigationItemSelectedListener=new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.gst1:
+                        Intent intent1 = new Intent(Compound.this, MainActivity.class);
+                        startActivity(intent1);
+                        break;
+                    case R.id.home:
+                        Intent intent = new Intent(Compound.this, More_Tools.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.sici:
+                        Intent intent4 = new Intent(Compound.this, Simple.class);
+                        startActivity(intent4);
+                        break;
+                    case R.id.bills:
+                        Intent intent2 = new Intent(Compound.this, BillsActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case R.id.news:
+                        Intent intent3 = new Intent(Compound.this, NewsActivity.class);
+                        startActivity(intent3);
+                        break;
+                }
+                return  true;
+            }
+        };
+        navigationView1=findViewById(R.id.bottomnav);
+        navigationView1.setOnNavigationItemSelectedListener(monNavigationItemSelectedListener);
+        navigationView1.getMenu().findItem(R.id.sici).setChecked(true);
+
+
+
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setTitle("Compound Interest Calculator");
@@ -61,6 +103,8 @@ public class Compound extends AppCompatActivity implements NavigationView.OnNavi
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 time=progress+1;
+                tenure.setText("Tenure : "+String.valueOf(progress));
+
             }
 
             @Override
@@ -124,6 +168,14 @@ public class Compound extends AppCompatActivity implements NavigationView.OnNavi
                 Intent intent1 = new Intent(Compound.this, MainActivity.class);
                 startActivity(intent1);
                 break;
+            case R.id.about:
+                Intent intent2 = new Intent(Compound.this, Appinfo.class);
+                startActivity(intent2);
+                break;
+            case R.id.help:
+                Intent intent4 = new Intent(Compound.this, Help.class);
+                startActivity(intent4);
+                break;
 
         }
         drawerLayout.closeDrawer(GravityCompat.START);
@@ -136,12 +188,15 @@ public class Compound extends AppCompatActivity implements NavigationView.OnNavi
     }
     @Override
     public void onBackPressed() {
+        navigationView1.getMenu().findItem(R.id.sici).setChecked(true);
+
         if(drawerLayout.isDrawerOpen(GravityCompat.START))
             drawerLayout.closeDrawer(GravityCompat.START);
         else
         {
+            Intent intent = new Intent(Compound.this, More_Tools.class);
+            startActivity(intent);
             finish();
-
             super.onBackPressed();
         }
 

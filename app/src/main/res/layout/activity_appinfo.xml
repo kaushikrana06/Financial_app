@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/whitewallpaper"
+    android:orientation="vertical"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent"
+    tools:context=".Appinfo">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/transparent"
+        app:titleTextColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="App Info"
+
+        android:elevation="4dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="250dp"
+        android:gravity="center_horizontal"
+        android:textSize="15dp"
+        android:text="Financial Application"
+        android:textColor="@color/black" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:textSize="10dp"
+        android:text="Version 1.0"
+        android:textColor="@color/black" />
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/splash"
+        android:layout_gravity="center"/>
+</LinearLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav"
+        android:background="@color/white"
+        app:subheaderColor="#4FBDBA"
+        app:itemIconTint="#4FBDBA"
+        app:itemTextColor="#35858B"
+        app:headerLayout="@layout/navigator"
+        app:menu="@menu/drawer"
+        android:layout_gravity="start"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

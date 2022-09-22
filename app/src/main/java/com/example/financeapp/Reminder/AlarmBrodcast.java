@@ -27,7 +27,7 @@ public class AlarmBrodcast extends BroadcastReceiver {
         intent1.putExtra("message", text);
 
         //Notification Builder
-        PendingIntent pendingIntent = PendingIntent.getActivity(context, 1, intent1, PendingIntent.FLAG_ONE_SHOT);
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 1, intent1, PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_MUTABLE);
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, "notify_001");
 

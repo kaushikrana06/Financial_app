@@ -28,13 +28,18 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.financeapp.Interest.Simple;
+import com.example.financeapp.Invoice.BillsActivity;
 import com.example.financeapp.MoreTools.More_Tools;
+import com.example.financeapp.News.NewsActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
+    BottomNavigationView navigationView1;
     private Button _btnOne;
     private Button _btnTwo;
     private Button _btnThree;
@@ -76,6 +81,38 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
         if(savedInstanceState == null)
             navigationView.setCheckedItem(R.id.gst);
+        BottomNavigationView.OnNavigationItemSelectedListener monNavigationItemSelectedListener=new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.gst1:
+                        recreate();
+                        break;
+                    case R.id.home:
+                        Intent intent = new Intent(MainActivity.this, More_Tools.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.sici:
+                        Intent intent1 = new Intent(MainActivity.this, Simple.class);
+                        startActivity(intent1);
+                        break;
+                    case R.id.bills:
+                        Intent intent2 = new Intent(MainActivity.this, BillsActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case R.id.news:
+                        Intent intent3 = new Intent(MainActivity.this, NewsActivity.class);
+                        startActivity(intent3);
+                        break;
+                }
+                return  true;
+            }
+        };
+        navigationView1=findViewById(R.id.bottomnav);
+        navigationView1.setOnNavigationItemSelectedListener(monNavigationItemSelectedListener);
+        navigationView1.getMenu().findItem(R.id.gst1).setChecked(true);
+
+
 
         Typeface mFontAwesomeFont = Typeface.createFromAsset(getAssets(), "fonts/fontawesomeicon.ttf");
         Typeface mOdin = Typeface.createFromAsset(getAssets(), "odin.otf");
@@ -281,36 +318,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-//        _dots.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                PopupMenu popup = new PopupMenu(MainActivity.this, _dots);
-//                popup.getMenuInflater().inflate(R.menu.menu, popup.getMenu());
-//                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-//                    public boolean onMenuItemClick(MenuItem item) {
-//                        switch (item.getItemId()) {
-//                            case R.id.about:
-//                           //     Intent intent = new Intent(MainActivity.this, AboutActivity.class);
-//                          //      startActivity(intent);
-//                        }
-//                        switch (item.getItemId()) {
-//                            case R.id.help:
-//                         //       Intent intent = new Intent(MainActivity.this, HelpActivity.class);
-//                         //       startActivity(intent);
-//                        }
-//                        //     switch (item.getItemId()){
-//                        //    case R.id.products:
-//                        //   Intent intent = new Intent(MainActivity.this,GoodActivity.class);
-//                        //     startActivity(intent);
-//                        //     }
-//                        return true;
-//                    }
-//                });
-//                popup.show();
-//
-//
-//            }
-//        });
     }
 
     private void calculateFinalPrice() {
@@ -389,6 +396,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.gst:
                 recreate();
                 break;
+            case R.id.about:
+                Intent intent2 = new Intent(MainActivity.this, Appinfo.class);
+                startActivity(intent2);
+                break;
+            case R.id.help:
+                Intent intent4 = new Intent(MainActivity.this, Help.class);
+                startActivity(intent4);
+                break;
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -396,36 +411,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onBackPressed() {
+        navigationView1.getMenu().findItem(R.id.gst1).setChecked(true);
         if(drawer.isDrawerOpen(GravityCompat.START))
             drawer.closeDrawer(GravityCompat.START);
-//        else
-//        {
-//            super.onBackPressed();
-//        }
-        AlertDialog.Builder mBuilder = new AlertDialog.Builder(this);
-        mBuilder.setMessage("Are you sure you want to Exit GST Calculator?")
-                .setCancelable(true)
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        finish();
-                    }
-                })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
-                });
-        AlertDialog mAlertDialog = mBuilder.create();
-        mAlertDialog.show();
+        else
+        {
+            Intent intent = new Intent(MainActivity.this, More_Tools.class);
+            startActivity(intent);
+            finish();
+            finish();
+            super.onBackPressed();
+        }
+
     }
 
-
-//    public void clickdashboard(MenuItem item) {
-//        redirectActivity(this,More_Tools.class);
-//
-//    }
-//
-//    public void clickhome(MenuItem item) {
-//        recreate();
-//    }
 }

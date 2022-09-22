@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/drawer_layout"
-    tools:openDrawer="start"
+    android:background="@color/white"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
    >
@@ -12,24 +12,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#efefef"
-    android:weightSum="10">
+    android:weightSum="10.25">
    <androidx.appcompat.widget.Toolbar
        android:layout_width="match_parent"
        android:layout_height="?attr/actionBarSize"
        android:id="@+id/toolbar"
+       android:background="@color/tool"
+       app:titleTextColor="@color/black"
        app:title="GST Calculator"
-       android:background="#bdbbbb"
-       app:titleTextColor="@color/white"
        android:elevation="4dp"/>
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3.5"
+        android:layout_height="8dp"
+        android:layout_weight="3"
+        android:layout_marginTop="5dp"
         android:background="@drawable/display"
-        android:backgroundTint="#bdbbbb"
         android:orientation="horizontal">
 
 
@@ -49,12 +48,12 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_height="7dp"
                 android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:weightSum="10"
-                android:gravity="center">
+                android:weightSum="10">
 
                 <RelativeLayout
                     android:layout_width="0dp"
@@ -67,51 +66,51 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:weightSum="10"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:weightSum="10">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="5.5"
-                        android:background="@drawable/bottom_border"/>
+                        android:background="@drawable/bottom_border" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="4.5"/>
+                        android:layout_weight="4.5" />
 
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/tv_finalPrice"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6.4"
+                    android:layout_height="30dp"
                     android:layout_gravity="center"
+                    android:layout_weight="6.4"
+                    android:gravity="center"
                     android:text="T A X    P R I C E   "
+                    android:textColor="@color/black"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:gravity="center"/>
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:weightSum="10"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:weightSum="10">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="5.5"
-                        android:background="@drawable/bottom_border"/>
+                        android:background="@drawable/bottom_border" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="4.5"/>
+                        android:layout_weight="4.5" />
 
                 </LinearLayout>
 
@@ -140,7 +139,7 @@
                 android:background="@android:color/transparent"
                 android:gravity="center_horizontal|top"
                 android:text=""
-                android:textColor="#05090e"
+                android:textColor="@color/black"
                 android:textSize="70sp" />
 
         </LinearLayout>
@@ -153,7 +152,6 @@
         android:layout_weight="1.5"
         android:layout_marginTop="1dp"
         android:background="@drawable/withtax"
-        android:backgroundTint="#d6d5d5"
         android:orientation="horizontal"
         android:weightSum="10">
 
@@ -188,6 +186,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="ACTUAL PRICE"
+                        android:textColor="@color/black"
                         android:textStyle="bold"
                         android:layout_marginBottom="-14dp"
                         android:textSize="18sp"/>
@@ -226,60 +225,50 @@
                         android:text="@string/fa_times_circle"
                         android:textColor="@color/silver"
                         android:textSize="22sp" />
-
                 </RelativeLayout>
-
             </LinearLayout>
-
-
-
-
         </LinearLayout>
-
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="5"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="4.5dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:padding="10dp"
+        android:id="@+id/cal"
+        android:layout_weight="5.7"
         android:background="@drawable/withtax"
-        android:backgroundTint="#e3e2e2"
-        android:paddingBottom="10dp"
-        android:paddingVertical="10dp"
-        android:paddingStart="15dp"
         android:orientation="vertical"
-        >
+       >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_weight="2.7"
+            android:layout_height="35dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="3.7"
             android:orientation="horizontal"
-            android:layout_marginBottom="5dp"
             android:weightSum="9">
 
             <Button
                 android:id="@+id/btn_seven"
                 android:layout_width="0dp"
-                android:layout_marginRight="30dp"
                 android:layout_height="70dp"
+                android:layout_marginRight="30dp"
                 android:layout_weight="2"
                 android:background="@drawable/round"
                 android:text="7"
-                android:textColor="#a68776"
-                android:textSize="20sp"/>
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btn_eight"
                 android:layout_width="0dp"
-                android:layout_marginRight="30dp"
                 android:layout_height="70dp"
+                android:layout_marginRight="30dp"
                 android:layout_weight="2"
                 android:background="@drawable/round"
                 android:text="8"
-                android:textColor="#a68776"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
 
             <Button
@@ -289,15 +278,16 @@
                 android:layout_weight="2"
                 android:background="@drawable/round"
                 android:text="9"
-                android:textColor="#a68776"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="70dp"
-                android:layout_weight="2.5"
                 android:layout_marginLeft="25dp"
+                android:layout_weight="2.5"
                 android:background="@drawable/round"
-                android:backgroundTint="#f5692b"
+                android:backgroundTint="@color/silver"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -307,9 +297,9 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="GST"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="16sp" />
+                    android:textColor="@color/darkGray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <Spinner
                     android:id="@+id/sp_listOfTaxes"
@@ -324,34 +314,34 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2.7"
-            android:orientation="horizontal"
-            android:layout_marginBottom="4dp"
+            android:layout_height="36dp"
             android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="3.6"
+            android:orientation="horizontal"
             android:weightSum="9">
 
             <Button
                 android:id="@+id/btn_four"
                 android:layout_width="0dp"
-                android:layout_marginRight="30dp"
                 android:layout_height="70dp"
+                android:layout_marginRight="30dp"
                 android:layout_weight="2"
                 android:background="@drawable/round"
                 android:text="4"
-                android:textColor="#a68776"
-                android:textSize="20sp"/>
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btn_five"
                 android:layout_width="0dp"
-                android:layout_marginRight="30dp"
                 android:layout_height="70dp"
+                android:layout_marginRight="30dp"
                 android:layout_weight="2"
                 android:background="@drawable/round"
                 android:text="5"
-                android:textColor="#a68776"
-                android:textSize="20sp"/>
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btn_six"
@@ -361,42 +351,42 @@
                 android:layout_weight="2"
                 android:background="@drawable/round"
                 android:text="6"
-                android:textColor="#a68776"
-                android:textSize="20sp"/>
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2.7"
+            android:layout_height="37dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="3.5"
             android:orientation="horizontal"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
 
             android:weightSum="9">
 
             <Button
                 android:id="@+id/btn_one"
                 android:layout_width="0dp"
-                android:layout_marginRight="30dp"
                 android:layout_height="70dp"
+                android:layout_marginRight="30dp"
                 android:layout_weight="2"
                 android:background="@drawable/round"
                 android:text="1"
-                android:textColor="#a68776"
-                android:textSize="20sp"/>
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btn_two"
                 android:layout_width="0dp"
-                android:layout_marginRight="30dp"
                 android:layout_height="70dp"
+                android:layout_marginRight="30dp"
                 android:layout_weight="2"
                 android:background="@drawable/round"
                 android:text="2"
-                android:textColor="#a68776"
-                android:textSize="20sp"/>
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btn_three"
@@ -407,47 +397,47 @@
                 android:layout_weight="2"
                 android:background="@drawable/round"
                 android:text="3"
-                android:textColor="#a68776"
-                android:textSize="20sp"/>
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2.7"
-            android:layout_marginTop="4dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="3.7"
             android:orientation="horizontal"
-            android:layout_marginBottom="4dp"
             android:weightSum="9">
 
             <Button
                 android:id="@+id/btn_point"
                 android:layout_width="0dp"
-                android:layout_marginRight="30dp"
                 android:layout_height="70dp"
+                android:layout_marginRight="30dp"
                 android:layout_weight="2"
                 android:background="@drawable/round"
                 android:text="."
                 android:textColor="#a68776"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btn_zero"
                 android:layout_width="0dp"
-                android:layout_marginRight="30dp"
                 android:layout_height="70dp"
+                android:layout_marginRight="30dp"
                 android:layout_weight="2"
                 android:background="@drawable/round"
                 android:text="0"
-                android:textColor="#a68776"
-                android:textSize="20sp"/>
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <FrameLayout
                 android:id="@+id/layout_clear"
                 android:layout_width="0dp"
-                android:layout_marginRight="25dp"
                 android:layout_height="70dp"
+                android:layout_marginRight="25dp"
                 android:layout_weight="2"
                 android:background="@drawable/round">
 
@@ -457,28 +447,47 @@
                     android:layout_gravity="center"
                     android:paddingLeft="5dp"
                     app:tint="#aeabaa" />
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/black"
                     android:layout_gravity="center"
-                    app:tint="#aeabaa" />
+                    android:src="@drawable/black" />
 
             </FrameLayout>
 
         </LinearLayout>
 
+
     </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:background="@drawable/round"
+        android:layout_gravity="center"
+        android:id="@+id/bottomnav"
+        android:paddingTop="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="2dp"
+        android:paddingRight="15dp"
+        app:itemIconSize="20dp"
+        app:itemIconTint="@color/black"
+        app:menu="@menu/bottom_menu"
+        android:layout_height="50dp"
+        android:layout_below="@id/cd" />
 
 </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="#04293A"
         android:id="@+id/nav"
         app:subheaderColor="#4FBDBA"
         app:itemIconTint="#4FBDBA"
         app:itemTextColor="#35858B"
+        android:background="@color/white"
+
         app:headerLayout="@layout/navigator"
         app:menu="@menu/drawer"
         android:layout_gravity="start"/>

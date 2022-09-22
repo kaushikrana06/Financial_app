@@ -5,17 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/white"
     android:paddingLeft="10dp"
-    android:background="#FCF8E8"
     android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context=".Invoice.DetailActivity"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:background="@color/white"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
+
             android:textColor="@color/colorPrimaryText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -88,25 +90,30 @@
 
     <ScrollView
         android:id="@+id/detail_sv"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
+            android:background="@color/white"
             android:layout_height="wrap_content">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/detail_recycler_view"
                 android:layout_width="match_parent"
+                android:background="@color/white"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"/>
 
             <LinearLayout
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
+
                     android:textColor="@color/colorPrimaryText"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -118,6 +125,7 @@
                 <TextView
                     android:id="@+id/total_amount_before_tax_value"
                     android:layout_width="0dp"
+                    android:textColor="@color/black"
                     android:layout_weight="1"
                     android:gravity="center_vertical|right"
                     android:layout_height="match_parent"
@@ -127,6 +135,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:background="@color/white"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
@@ -139,6 +148,7 @@
                     android:textSize="18sp"
                     android:textStyle="bold"/>
                 <TextView
+                    android:textColor="@color/black"
                     android:id="@+id/total_cgst_value"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -149,6 +159,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -162,6 +173,7 @@
                     android:textSize="18sp"
                     android:textStyle="bold"/>
                 <TextView
+                    android:textColor="@color/black"
                     android:id="@+id/total_sgst_value"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -173,6 +185,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:background="@color/white"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
@@ -185,6 +198,7 @@
                     android:textSize="18sp"
                     android:textStyle="bold"/>
                 <TextView
+                    android:textColor="@color/black"
                     android:id="@+id/total_gst_value"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -197,6 +211,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:orientation="horizontal">
                 <TextView
                     android:textColor="@color/colorPrimaryText"
@@ -208,6 +223,7 @@
                     android:textSize="18sp"
                     android:textStyle="bold"/>
                 <TextView
+                    android:textColor="@color/black"
                     android:id="@+id/total_amount_after_tax_value"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -222,8 +238,10 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:textSize="16sp"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
 
         </LinearLayout>
 

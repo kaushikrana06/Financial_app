@@ -4,65 +4,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/drawer_layout"
+    android:background="@color/white"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".Invoice.BillsActivity">
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     android:layout_width="match_parent"
-    android:background="#151515"
     android:layout_height="match_parent">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:foregroundTint="@color/black"
         android:layout_marginBottom="5dp"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
+            android:background="@color/black"
+            app:titleTextColor="@color/white"
+            app:subtitleTextColor="@color/white"
             android:layout_width="match_parent"
+            android:foregroundTint="@color/black"
             android:layout_height="?attr/actionBarSize"
             android:id="@+id/toolbar"
-            android:background="#151515"
-            app:titleTextColor="#256D85"
             android:elevation="4dp"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="600dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/unpaid_recycler_view"
-            android:padding="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp" />
 
     </LinearLayout>
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_unpaid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="20dp"
         android:tint="@color/colorPrimaryDark"
         app:srcCompat="@android:drawable/ic_input_add"
         android:contentDescription="new user" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/cd"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="757dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/round"
+        android:paddingTop="2dp"
+        android:paddingRight="15dp"
+        app:itemIconSize="20dp"
+        app:itemIconTint="@color/black"
+        app:menu="@menu/bottom_menu" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="#04293A"
         android:id="@+id/nav"
         app:subheaderColor="#4FBDBA"
         app:itemIconTint="#4FBDBA"
         app:itemTextColor="#35858B"
+        android:background="@color/white"
+        app:itemIconSize="5dp"
         app:headerLayout="@layout/navigator"
         app:menu="@menu/drawer"
         android:layout_gravity="start"/>

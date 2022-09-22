@@ -1,11 +1,13 @@
 package com.example.financeapp.Reminder;
 
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.DatePickerDialog;
 import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -15,6 +17,8 @@ import android.widget.EditText;
 import android.widget.TimePicker;
 import android.widget.Toast;
 import com.example.financeapp.R;
+
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.DateFormat;
@@ -58,6 +62,7 @@ public class ReminderActivity extends AppCompatActivity {
         });
 
         mSubmitbtn.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.S)
             @Override
             public void onClick(View view) {
                 String title = mTitledit.getText().toString().trim();                               //access the data form the input field
@@ -81,6 +86,7 @@ public class ReminderActivity extends AppCompatActivity {
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.S)
     private void processinsert(String title, String date, String time) {
         String result = new com.example.financeapp.Reminder.dbManager(this).addreminder(title, date, time);                  //inserts the title,date,time into sql lite database
         setAlarm(title, date, time);                                                                //calls the set alarm method to set alarm
@@ -145,6 +151,7 @@ public class ReminderActivity extends AppCompatActivity {
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.S)
     private void setAlarm(String text, String date, String time) {
         AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);                   //assigining alaram manager object to set alaram
 
@@ -153,11 +160,12 @@ public class ReminderActivity extends AppCompatActivity {
         intent.putExtra("time", date);
         intent.putExtra("date", time);
 
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_ONE_SHOT);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_MUTABLE);
         String dateandtime = date + " " + timeTonotify;
-        DateFormat formatter = new SimpleDateFormat("d-M-yyyy hh:mm");
+        @SuppressLint("SimpleDateFormat") DateFormat formatter = new SimpleDateFormat("d-M-yyyy hh:mm");
         try {
             Date date1 = formatter.parse(dateandtime);
+            assert date1 != null;
             am.set(AlarmManager.RTC_WAKEUP, date1.getTime(), pendingIntent);
             Toast.makeText(getApplicationContext(), "Alarm", Toast.LENGTH_SHORT).show();
 

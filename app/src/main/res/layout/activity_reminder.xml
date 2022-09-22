@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#112031"
+    android:background="@color/white"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
@@ -12,16 +12,19 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
+        android:backgroundTint="@color/white"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:backgroundTint="#152D35"
+        android:elevation="30dp"
         app:cardCornerRadius="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/white"
             android:orientation="vertical"
-            app:backgroundTint="@null">
+            android:layout_marginBottom="5dp"
+            >
 
 
             <TextView
@@ -31,7 +34,7 @@
                 android:textSize="30dp"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:textColor="#D4ECDD"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_margin="10dp"/>
 
@@ -41,16 +44,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:layout_margin="10dp"
+                android:elevation="10dp"
                 android:padding="10dp"
-                android:textColor="#D4ECDD"
+                android:textColor="@color/black"
                 android:background="@drawable/round2"
-                android:backgroundTint="#345B63"
+                android:backgroundTint="@color/white"
                 android:hint="Enter The Task" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:orientation="horizontal">
 
 
@@ -59,21 +64,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:textColor="#D4ECDD"
-                    android:backgroundTint="#3E2C41"
+                    android:backgroundTint="@color/purple_500"
+                    android:textColor="@color/white"
                     android:background="@drawable/round2"
                     android:layout_weight="0.5"
+                    android:elevation="10dp"
                     android:text="date" />
 
                 <Button
                     android:id="@+id/btnTime"
+                    android:backgroundTint="@color/purple_500"
+                    android:textColor="@color/white"
                     android:background="@drawable/round2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:textColor="#D4ECDD"
-                    android:backgroundTint="#3E2C41"
                     android:layout_weight="0.5"
+                    android:elevation="10dp"
                     android:text="time" />
 
             </LinearLayout>
@@ -83,10 +90,11 @@
                 android:id="@+id/btnSbumit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:elevation="10dp"
                 android:layout_margin="10dp"
-                android:textColor="#5089C6"
-                android:background="@drawable/round2"
-                android:backgroundTint="#112031"
+                android:backgroundTint="@color/purple_500"
+                android:textColor="@color/white"                android:background="@drawable/round2"
+                android:layout_marginBottom="20dp"
                 android:text="Save" />
 
         </LinearLayout>

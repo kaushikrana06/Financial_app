@@ -4,43 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/drawer_layout"
+    android:background="@color/white"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".News.NewsActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#1A1A2E"
+        android:background="@color/white"
         android:orientation="vertical">
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:id="@+id/toolbar"
-            android:background="#1A1A2E"
             app:title="News"
-            app:titleTextColor="#916BBF"
+            android:background="@color/tool"
+            app:titleTextColor="@color/black"
             android:elevation="4dp"/>
+
         <androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/recycler_main"
-    android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-
+            android:id="@+id/recycler_main"
+            android:layout_width="match_parent"
+            android:layout_height="689dp"
+            android:layout_marginLeft="8dp"
             android:layout_marginTop="10dp"
-    android:layout_width="match_parent"
-            android:background="#1A1A2E"
-            android:paddingTop="10dp"
-    android:layout_height="match_parent">
+            android:layout_marginRight="8dp"
+            android:background="@color/white"
+            android:paddingTop="10dp">
 
-</androidx.recyclerview.widget.RecyclerView>
+        </androidx.recyclerview.widget.RecyclerView>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:background="@drawable/round"
+            android:layout_gravity="center"
+            android:id="@+id/bottomnav"
+            android:paddingTop="2dp"
+            android:layout_margin="10dp"
+            android:paddingRight="15dp"
+            app:itemIconSize="20dp"
+            app:itemIconTint="@color/black"
+            app:menu="@menu/bottom_menu"
+            android:layout_height="50dp"
+            android:layout_below="@id/cd" />
     </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="#04293A"
         android:id="@+id/nav"
         app:subheaderColor="#4FBDBA"
         app:itemIconTint="#4FBDBA"
         app:itemTextColor="#35858B"
+        android:background="@color/white"
+
         app:headerLayout="@layout/navigator"
         app:menu="@menu/drawer"
         android:layout_gravity="start"/>

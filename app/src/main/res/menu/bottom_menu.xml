@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/gst1"
+        android:icon="@drawable/gst"
+        android:title="GST" />
+    <item
+        android:id="@+id/news"
+        android:icon="@drawable/video"
+        android:title="News"
+        />
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"
+        />
+    <item
+        android:id="@+id/sici"
+        android:icon="@drawable/interest"
+        android:title="Interest"
+        />
+    <item
+        android:id="@+id/bills"
+        android:icon="@drawable/bill"
+        android:title="Bill"
+        />
+</menu>

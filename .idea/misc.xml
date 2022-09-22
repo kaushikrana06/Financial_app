@@ -8,6 +8,7 @@
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/drawable/back.xml" value="0.1" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/drawable/bill_item_selector.xml" value="0.1975" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/drawable/bottom_border.xml" value="0.1" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/drawable/display.xml" value="0.1715" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/drawable/gradient.xml" value="0.1" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/drawable/gradient1.xml" value="0.2555" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/drawable/gradient2.xml" value="0.1" />
@@ -27,10 +28,11 @@
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/drawable/round_view_black.xml" value="0.1" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/drawable/round_view_white.xml" value="0.1" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/drawable/withtax.xml" value="0.1" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_auto_lease_calc.xml" value="0.2" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_auto_loan_calc.xml" value="0.152" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_bills.xml" value="0.17465224111282843" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_compound.xml" value="0.264" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_appinfo.xml" value="0.2" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_auto_lease_calc.xml" value="0.24592074592074592" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_auto_loan_calc.xml" value="0.17207334273624825" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_bills.xml" value="0.2" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_compound.xml" value="0.2" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_convert.xml" value="0.264" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_credit_card_calc.xml" value="0.264" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_crypto.xml" value="0.25" />
@@ -39,41 +41,45 @@
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_detail2.xml" value="0.2" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_details.xml" value="0.1" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_emi.xml" value="0.1" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_emi_cal.xml" value="0.264" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_emi_cal.xml" value="0.2" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_help.xml" value="0.20505344995140914" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_income_tax.xml" value="0.2" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_more_tools.xml" value="0.264" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_mortgage_calc.xml" value="0.264" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_new_bill.xml" value="0.25" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_more_tools.xml" value="0.176" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_mortgage_calc.xml" value="0.1" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_new_bill.xml" value="0.1883656509695291" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_new_bill_customer.xml" value="0.25" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_news.xml" value="0.1" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_notification_message.xml" value="0.25" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_remind.xml" value="0.1" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_reminder.xml" value="0.25" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_retirement_calc.xml" value="0.2" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_retirement_calc.xml" value="0.1" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_save_pdf.xml" value="0.25" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_savings_recurring_calc.xml" value="0.25" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_savings_recurring_calc.xml" value="0.1" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_select_theme.xml" value="0.1" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_setup_password.xml" value="0.1" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_simple.xml" value="0.3976143141153082" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_simple.xml" value="0.1" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_sip.xml" value="0.1786339754816112" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_splash.xml" value="0.264" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/app_bar_main.xml" value="0.25" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/card_items.xml" value="0.1390625" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/card_items.xml" value="0.264" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/content_auto_lease_calc.xml" value="0.176" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/content_auto_loan_calc.xml" value="0.2" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/content_certificate_of_deposit.xml" value="0.2" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/content_credit_card_calc.xml" value="0.264" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/content_credit_card_calc.xml" value="0.2" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/content_mortgage_calc.xml" value="0.264" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/content_retirement_calc.xml" value="0.2" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/content_savings_recurring_calc.xml" value="0.2" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/content_retirement_calc.xml" value="0.264" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/content_savings_recurring_calc.xml" value="0.176" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/fragment_blank.xml" value="0.25" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/headlines.xml" value="0.25" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/navigator.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/notification_layout.xml" value="0.3091190108191654" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/single_item_bills_layout.xml" value="0.25" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/single_item_detail_layout.xml" value="0.25" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/single_item_pdf_layout.xml" value="0.25" />
-        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/single_reminder_file.xml" value="0.6" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/layout/single_reminder_file.xml" value="0.22042139384116693" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/menu/bottom_menu.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/menu/bottommenu.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/menu/drawer.xml" value="0.25" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/menu/menu.xml" value="0.264" />
         <entry key="..\:/Users/kaush/AndroidStudioProjects/FinanceApp/app/src/main/res/menu/menu_bill.xml" value="0.25" />
